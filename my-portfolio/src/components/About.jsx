@@ -1,4 +1,4 @@
-import profilePic from "../assets/image.jpg"; // replace with your image path
+import profilePic from "../assets/image.png"; // replace with your image path
 
 export default function About() {
   return (
@@ -17,12 +17,19 @@ export default function About() {
       {/* About Content Card */}
       <div className="w-auto mx-auto bg-slate-800/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-slate-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center">
         
-        {/* Profile Picture */}
-        <img
-          src={profilePic}
-          alt="Floyd Jostin Sequeira"
-          className="w-40 h-40 md:w-48 md:h-48 rounded-full mb-6 border-4 border-purple-500 shadow-lg"
-        />
+            {/* Profile Picture */}
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg mb-6">
+              <div className="w-full h-full rounded-full overflow-hidden bg-slate-900">
+                <img
+                  src={profilePic}
+                  alt="Floyd Jostin Sequeira"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "50% 35%" }}
+                />
+              </div>
+            </div>
+
+
 
         {/* Description */}
         <p className="text-gray-300 text-left leading-relaxed text-base sm:text-lg">
