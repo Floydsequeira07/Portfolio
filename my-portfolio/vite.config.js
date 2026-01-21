@@ -4,9 +4,14 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+
+  // 👇 REQUIRED for GitHub Pages
+  base: "/Portfolio/",
+
   server: {
     port: 3000,
   },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
