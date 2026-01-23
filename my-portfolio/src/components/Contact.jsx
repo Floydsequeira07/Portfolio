@@ -2,7 +2,7 @@ import links from "../data/links";
 import emailIcon from "../assets/email.png";
 import phoneIcon from "../assets/phone.png";
 import linkedinIcon from "../assets/linkedin.png";
-import githubIcon from "../assets/github.png";
+import githubIcon from "../assets/githublogo.png";
 import whatsappIcon from "../assets/whatsapp.png";
 import instagramIcon from "../assets/instagram.png";
 
