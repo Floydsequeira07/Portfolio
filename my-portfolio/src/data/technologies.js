@@ -15,6 +15,7 @@ const technologies = [
   { name:"Flutter", logo: "/tech/flutter.png" },
   { name: "Docker", logo: "/tech/docker.png" },
   { name: "Git", logo: "/tech/git.png" },
+  { name: "GitHub", logo: "/tech/githublogo.png" },
   { name: "Figma", logo: "/tech/figma.png" },
 ];
 
