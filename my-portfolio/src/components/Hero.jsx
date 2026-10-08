@@ -59,13 +59,19 @@ export default function Hero() {
 
         {/* LEFT */}
         <div className="text-center md:text-left animate-[fadeUp_0.8s_ease-out]">
-  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold">
+  <span className="text-foreground">
     Hi, I'm{" "}
-    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-      Floyd Jostin Sequeira
-    </span>
-    <span className="inline-block animate-wave ml-2 text-white">👋</span>
-  </h1>
+  </span>
+
+  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+    Floyd Jostin Sequeira
+  </span>
+
+  <span className="inline-block animate-wave ml-2 text-white">
+    👋
+  </span>
+</h1>
 
   {/* TYPING SUBTITLE */}
   <div className="mt-4 mb-8 h-12">
