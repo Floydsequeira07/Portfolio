@@ -1,7 +1,42 @@
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import heroEmoji from "../assets/emoji.png";
+import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
+  const texts = [
+  "React.js Developer",
+  "Node.js Developer",
+  "Next.js Developer",
+  "AI Application Developer",
+  "REST API Developer",
+];
+
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+  
+    if (!deleting && subIndex === texts[index].length) {
+      const pause = setTimeout(() => setDeleting(true), 1200);
+      return () => clearTimeout(pause);
+    }
+
+    
+    if (deleting && subIndex === 0) {
+      setDeleting(false);
+      setIndex((prev) => (prev + 1) % texts.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (deleting ? -1 : 1));
+    }, deleting ? 50 : 100);
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, deleting, index]);
+
   return (
     <section
       id="hero"
@@ -14,50 +49,49 @@ export default function Hero() {
         overflow-hidden
       "
     >
-      {/* SOFT BACKGROUND GLOW */}
+      {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-[-10%] top-[-20%] w-[520px] h-[520px] bg-purple-500/20 rounded-full blur-[140px]" />
         <div className="absolute right-[-10%] bottom-[-20%] w-[520px] h-[520px] bg-blue-500/20 rounded-full blur-[140px]" />
       </div>
 
-      {/* CONTENT */}
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-        {/* LEFT CONTENT */}
+        {/* LEFT */}
         <div className="text-center md:text-left animate-[fadeUp_0.8s_ease-out]">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-            Hi, I'm{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-              Floyd Jostin Sequeira
-            </span>{" "}
-            <span className="inline-block animate-wave ml-2 text-white">👋</span>
-          </h1>
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+    Hi, I'm{" "}
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+      Floyd Jostin Sequeira
+    </span>
+    <span className="inline-block animate-wave ml-2 text-white">👋</span>
+  </h1>
 
+  {/* TYPING SUBTITLE */}
+  <div className="mt-4 mb-8 h-12">
+    <div className="text-lg sm:text-xl font-semibold text-blue-400">
+      Full Stack Developer
+    </div>
+
+    <div className="h-6 overflow-hidden">
+      <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+        {texts[index].substring(0, subIndex)}
+        <span className="ml-1 animate-pulse">|</span>
+      </span>
+    </div>
+  </div>
+          {/* DESCRIPTION */}
           <p className="max-w-xl mx-auto md:mx-0 text-base sm:text-lg mb-10 leading-relaxed text-muted-foreground">
-            I’m a passionate{" "}
-            <span className="text-blue-400 font-semibold">Full Stack</span> and{" "}
-            <span className="text-purple-400 font-semibold">Python developer</span>{" "}
-            with expertise in creating{" "}
-            <span className="text-blue-400 font-semibold">robust</span>,{" "}
-            <span className="text-purple-400 font-semibold">scalable</span>, and{" "}
-            <span className="text-blue-400 font-semibold">user-friendly</span>{" "}
-            web applications. Skilled in{" "}
-            <span className="text-purple-400 font-semibold">React</span>,{" "}
-            <span className="text-blue-400 font-semibold">Express.js</span>, and{" "}
-            <span className="text-purple-400 font-semibold">MySQL</span>, I focus on
-            delivering{" "}
-            <span className="text-blue-400 font-semibold">efficient solutions</span>{" "}
-            that drive{" "}
-            <span className="text-purple-400 font-semibold">innovation</span> and
-            create{" "}
-            <span className="text-blue-400 font-semibold">
-              meaningful digital experiences
-            </span>.
-          </p>
+  I’m a passionate{" "}
+  <span className="text-blue-400 font-semibold">Full Stack Developer</span>{" "}
+  focused on building scalable, user-friendly, and{" "}
+  <span className="text-purple-400 font-semibold">AI-powered applications.</span>
+</p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          {/* BUTTONS */}
+           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
-              href="/Floyd_resume.pdf"
+              href="/Floyd_Sequeira_updatedSky.pdf"
               download
               className="
                 px-6 py-3 rounded-lg font-medium
@@ -82,8 +116,10 @@ export default function Hero() {
               Contact Me
             </NavLink>
           </div>
+        
         </div>
 
+       
         {/* RIGHT EMOJI */}
         <div className="flex justify-center relative animate-[fadeUp_1s_ease-out]">
           {/* Glow Ring */}
@@ -101,14 +137,33 @@ export default function Hero() {
             "
           />
         </div>
-         <div onClick={()=>
-          document.getElementById("about")?.scrollIntoView({behavior:"smooth"})
-         }
-         aria-label="Scroll to next section"
- 
-         className="absolute bottom-6 left-1/2 -translate-x-1/2  text-4xl md:text-5xl text-muted-foreground   animate-bounce  select-none">
-              ↓
-            </div>
+         <div
+  onClick={() =>
+    document.getElementById("about")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  aria-label="Scroll to next section"
+  className="
+    absolute bottom-6 left-1/2 -translate-x-1/2
+    w-12 h-12
+    rounded-full
+    border border-blue-400/50
+    bg-background/40
+    backdrop-blur-sm
+    flex items-center justify-center
+    text-blue-400
+    cursor-pointer
+    animate-bounce
+    hover:bg-blue-500/10
+    hover:border-blue-400
+    hover:text-blue-300
+    transition-all duration-300
+    shadow-[0_0_20px_rgba(59,130,246,0.25)]
+  "
+>
+  <ChevronDown size={26} strokeWidth={2} />
+</div>
 
       </div>
     </section>

@@ -1,5 +1,43 @@
 const projects = [
   {
+  title: "AI-Powered Knowledge Chatbot",
+  description:
+    "An AI-powered internal knowledge base chatbot with role-based authentication, persistent chat sessions, and real-time admin monitoring. Built using React.js, Node.js, Express.js, MySQL, Socket.IO, LLM, and Groq AI to provide AI-generated responses based on company knowledge base articles.",
+  demo: "https://ai-knowledge-assistant1.vercel.app/",
+  code: "https://github.com/Floydsequeira07/AI-Knowledge-Assistant",
+  technologies: [
+    "HTML5",
+    "JavaScript",
+    "React.js",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MySQL",
+    "Socket.IO",
+    "LLM",
+    "Groq AI",
+  ],
+},
+{
+  title: "Leave Management System",
+  description:
+    "A full-stack leave management system with separate employee and admin workflows for leave requests, approvals, leave history, and balance tracking. Built with React.js, Node.js, Express.js, MySQL, and Tailwind CSS with role-based authentication and responsive dashboards.",
+  demo: "https://leave-management-floyd.vercel.app/",
+  code: "https://github.com/Floydsequeira07/leave-management-system",
+  technologies: [
+    "React.js",
+    "JavaScript",
+    "Tailwind CSS",
+    "Axios",
+    "React Router DOM",
+    "Node.js",
+    "Express.js",
+    "MySQL",
+    "JWT",
+    "bcryptjs",
+  ],
+},
+  {
     title: "Cafe Website",
     description:
       "A responsive cafe website built using HTML, CSS, and JavaScript to showcase menu items, special offers, and customer reviews. Designed to promote the coffee shop with an attractive and user-friendly layout.",

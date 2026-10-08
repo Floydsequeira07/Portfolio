@@ -1,4 +1,4 @@
-import profilePic from "../assets/image.png";
+import profilePic from "../assets/floyd.png";
 
 export default function About() {
   return (
@@ -49,40 +49,40 @@ export default function About() {
         </div>
 
         {/* Description */}
-        <p className="
-          text-left leading-relaxed
-          text-base sm:text-lg
-          text-muted-foreground
-        ">
-          I’m a dedicated and versatile{" "}
-          <span className="text-blue-400 font-semibold">Full Stack Developer</span>{" "}
-          with a growing passion for{" "}
-          <span className="text-purple-400 font-semibold">UI/UX Design</span>.
-          I enjoy building clean, intuitive, and user-focused digital experiences.
+       <p className="
+  text-left leading-relaxed
+  text-base sm:text-lg
+  text-muted-foreground
+">
+  I’m a dedicated and passionate{" "}
+  <span className="text-blue-400 font-semibold">Full Stack Developer</span>{" "}
+  with hands-on experience in building responsive, scalable, and
+  user-friendly web applications.
 
-          Skilled in{" "}
-          <span className="text-purple-400 font-semibold">React.js</span>,{" "}
-          <span className="text-blue-400 font-semibold">Next.js</span>,{" "}
-          <span className="text-purple-400 font-semibold">Express.js</span>,{" "}
-          <span className="text-blue-400 font-semibold">MySQL</span>, and{" "}
-          <span className="text-purple-400 font-semibold">Python</span>, I
-          specialize in creating efficient, scalable web applications that blend
-          strong engineering with thoughtful design.
+  I have experience working with{" "}
+  <span className="text-purple-400 font-semibold">React.js</span>,{" "}
+  <span className="text-blue-400 font-semibold">Next.js</span>,{" "}
+  <span className="text-purple-400 font-semibold">Node.js</span>,{" "}
+  <span className="text-blue-400 font-semibold">NestJS</span>,{" "}
+  <span className="text-purple-400 font-semibold">Express.js</span>, and{" "}
+  <span className="text-blue-400 font-semibold">MySQL</span>,{" "}
+  developing frontend interfaces, REST APIs, backend services, and
+  database-driven applications.
 
-          Alongside development, I’m actively improving my skills in{" "}
-          <span className="text-blue-400 font-semibold">wireframing</span>,{" "}
-          <span className="text-purple-400 font-semibold">prototyping</span>, and{" "}
-          <span className="text-blue-400 font-semibold">UI layout design</span>.
-          I enjoy analyzing user needs, planning smooth user flows, and
-          transforming ideas into visually appealing interfaces.
+  I’m also interested in{" "}
+  <span className="text-purple-400 font-semibold">AI-powered applications</span>{" "}
+  and have worked with{" "}
+  <span className="text-blue-400 font-semibold">LLMs</span>,{" "}
+  <span className="text-purple-400 font-semibold">Groq AI</span>, and{" "}
+  <span className="text-blue-400 font-semibold">Socket.IO</span>{" "}
+  to build intelligent and real-time applications.
 
-          I thrive in collaborative environments, love solving complex problems,
-          and continuously aim to{" "}
-          <span className="text-purple-400 font-semibold">
-            learn new technologies
-          </span>{" "}
-          while contributing to meaningful and user-centered digital products.
-        </p>
+  I enjoy solving problems, learning new technologies, and building
+  applications that provide practical and meaningful solutions. I’m
+  continuously improving my development skills while looking for
+  opportunities to contribute to real-world projects and grow as a
+  Full Stack Developer.
+</p>
       </div>
     </section>
   );

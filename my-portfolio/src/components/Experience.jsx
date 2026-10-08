@@ -7,36 +7,45 @@ const experiences = [
     role: "Full Stack Developer Intern",
     company: "MindStack Technologies Pvt Ltd",
     location: "Mangaluru, Karnataka",
-    duration: "Dec 2025 – Present",
-    type: "On-site (Ongoing)",
-    description: `• Working on HealthConnect a full-stack healthcare booking platform.
-• Developing frontend using Next.js, Tailwind CSS, and modern React patterns.
-• Building backend APIs with NestJS and MySQL.
-• Implementing role-based access, dashboards, and booking workflows.
-• Using TypeScript, React Hooks, and Lucide icons for scalable UI development.`,
-    technologies: [
-      "Next.js",
-      "NestJS",
-      "TypeScript",
-      "MySQL",
-      "Tailwind CSS",
-      "React Hooks",
-      "Lucide Icons",
-    ],
+    duration: "Dec 2025 – Apr 2026",
+    type: "On-site",
+    description: `• Developed UIs for HealthConnect, Maxwealth, ASEAN Connect, and Torus Admin using React.js and Next.js.
+• Built REST APIs and backend services using Node.js, NestJS, and MySQL, with application testing.
+• Integrated frontend components with backend APIs to ensure seamless data flow.
+• Implemented authentication and authorization features for secure user access.`,
+   technologies: [
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "NestJS",
+  "Tailwind CSS",
+  "MySQL",
+  "REST API",
+],
     highlight: true,
   },
-  {
-    role: "Software Development Intern",
-    company: "Ukshati Technologies Pvt Ltd",
-    location: "Mangaluru, Karnataka",
-    duration: "Feb 2025 – May 2025",
-    type: "On-site",
-    description: `• Developed responsive user interfaces using React.js.
-• Built and optimized backend services with Node.js and MySQL.
-• Deployed applications using Docker for containerization.`,
-    technologies: ["React.js", "Express.js", "Node.js", "MySQL", "Docker"],
-    highlight: false,
-  },
+{
+  role: "Software Development Intern",
+  company: "Ukshati Technologies Pvt Ltd",
+  location: "Mangaluru, Karnataka",
+  duration: "Mar 2025 – May 2025",
+  type: "On-site",
+  description: `• Developed responsive user interfaces using React.js with dynamic components and state management.
+• Developed reusable React components to improve code maintainability.
+• Built backend services using Node.js and MySQL, and deployed applications using Docker.
+• Integrated frontend applications with REST APIs for smooth functionality.
+• Worked with Git for version control and collaborative development workflows.`,
+  technologies: [
+    "React.js",
+    "Node.js",
+    "MySQL",
+    "Docker",
+    "REST API",
+    "Git",
+  ],
+  highlight: false,
+},
 ];
 
 export default function Experience() {
